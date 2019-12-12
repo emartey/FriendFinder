@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>DogTag</title>
+    <title>catTag</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 </head>
@@ -15,9 +15,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="jumbotron">
-                    <h1>DogTag Survey</h1>
+                    <h1>CatMate Survey</h1>
                     <p class="lead">
-                        Have your dog provide the answers to the following questions to
+                        Have your cat provide the answers to the following questions to
                         get matched with their ideal playmate! Select a number from 1 to 5
                         based on how much you agree with each statement (1 is Strongly
                         Disagree while 5 is Strongly Agree).
@@ -33,7 +33,7 @@
                         <input type="url" id="photo" />
                     </div>
                     <div class="form-group">
-                        <h5>I love to bark at anything and everything.</h5>
+                        <h5>I love to meow loudly and often.</h5>
                         <select name="q1">
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -43,7 +43,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <h5>I prefer biscuits over bones.</h5>
+                        <h5>I prefer catnip over fish.</h5>
                         <select name="q2">
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -53,7 +53,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <h5>Fetching a frisbee is better than fetching a ball.</h5>
+                        <h5>I don't mind playing fetch from time to time. As long as the human is doing the fetching
+                        </h5>
                         <select name="q3">
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -63,7 +64,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <h5>Belly rubs are the best form of pets, paws down.</h5>
+                        <h5>I like to petted, briefly.</h5>
                         <select name="q4">
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -87,7 +88,7 @@
                     </div>
                     <div class="form-group">
                         <h5>
-                            Rolling in the grass is more fun than digging in the dirt.
+                            I like jumping on things.
                         </h5>
                         <select name="q6">
                             <option value="1">1 (Strongly Disagree)</option>
@@ -99,7 +100,7 @@
                     </div>
                     <div class="form-group">
                         <h5>
-                            I like to keep my paws clean -- no playing in the mud for me!
+                            I like to keep clean -- no playing outside for me!
                         </h5>
                         <select name="q7">
                             <option value="1">1 (Strongly Disagree)</option>
@@ -110,7 +111,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <h5>A growl is better than a bark for protecting my human.</h5>
+                        <h5>A scratch is better than a snarl for protecting my human... from touching me.</h5>
                         <select name="q8">
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -130,7 +131,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <h5>Squirrels, not birds, are the ultimate enemy.</h5>
+                        <h5>Rats, not birds, are the ultimate enemy.</h5>
                         <select name="q10">
                             <option value="1">1 (Strongly Disagree)</option>
                             <option value="2">2</option>
@@ -174,7 +175,7 @@
                 for (let i = 1; i < 11; i++) {
                     answers.push(document.querySelector(`select[name="q${i}"]`).value);
                 }
-                const newDog = {
+                const newcat = {
                     name: name,
                     photoURL: photoURL,
                     answers: answers
@@ -190,7 +191,7 @@
                     }
                 };
                 xhr.setRequestHeader("Content-Type", "application/json");
-                xhr.send(JSON.stringify(newDog));
+                xhr.send(JSON.stringify(newcat));
             });
         const closeButton = document.querySelector(".close");
         closeButton.onclick = function () {
